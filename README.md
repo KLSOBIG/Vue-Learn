@@ -1,4 +1,4 @@
-#vue标签
+# vue标签
 - v-model="inputValue" //获取标签内容
 - v-for="(item, key, index) of list" //遍历list的item，还可用in，推荐使用of。  
 - v-on:click="" == @click="" //绑定点击事件
@@ -11,9 +11,9 @@
 - v-else-if="" //v-if拓展  
 - v-show="" //false时DOM；display="none"  
 - :key="" //vue元素识别   
-#vue方法
+# vue方法
 - vm.$destroy() //销毁vm实例
-#vue实例
+# vue实例
 ```
 var vm = new ({ //创建vue实例，接管页面某部分的DOM的渲染，根实力  
     el: '#app', //定义vue实例接管的DOM的标签  
@@ -47,7 +47,7 @@ Vue.component('item',{ //创建模块实例
     template: "<div>Hello world</div>", //定义实例模板   
 })  
 ```
-#vue数组方法
+# vue数组方法
 - pop() //删除数组最后一项  
 - push() //向数组增加一条数据  
 - shift() //删除数据第一项  
@@ -56,7 +56,7 @@ Vue.component('item',{ //创建模块实例
 - sort() //对数组进行排序  
 - reverse() //对数组取反  
 - set()  
-#vue生命周期
+# vue生命周期  
 - vue生命周期图  
 <div align="center">![vue生命周期](./imgs/vue生命周期.png)  
 - vue生命周期钩子  
