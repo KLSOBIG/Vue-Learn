@@ -58,10 +58,10 @@ Vue.component('item',{ //创建模块实例
 - set()  
 # vue生命周期  
 - vue生命周期图  
-<div align="center">![vue生命周期](./imgs/vue生命周期.png)  
+<div align="center">![vue生命周期](./imgs/vue生命周期.png)    
 - vue生命周期钩子  
-    - beforeCreate //初始化之前  
-    - created //初始化完成  
+beforeCreate //初始化之前  
+created //初始化完成  
     - beforeMount //实例渲染之前  
     - mounted //实例渲染完成  
     - beforeDestroy //实例销毁之前  
