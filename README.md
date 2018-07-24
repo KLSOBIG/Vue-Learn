@@ -60,6 +60,7 @@ Vue.component('item',{ //创建模块实例
 - vue生命周期图  
 <div align="center">![vue生命周期](./imgs/vue生命周期.png)</div>    
 - vue生命周期钩子  
+- v-model="inputValue" //获取标签内容
 -- beforeCreate //初始化之前  
 -- created //初始化完成  
     - beforeMount //实例渲染之前  
