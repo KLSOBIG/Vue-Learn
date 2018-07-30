@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>组件参数校验与非propos特性</title>
+	<script type="text/javascript" src="../../vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<child concent="hello world"></child>
+	</div>
+
+	<script type="text/javascript">
+		Vue.component('child', {
+			// props:['concent'],
+			props: {
+				// concent: [Number,String]
+				// concent: String
+				concent: {
+					type: String,
+					required: true, 
+            		default: 'default value',
+            		validator: function (value) { 
+               			return (value.length > 5)  
+            		}
+				}
+			},
+			template: "<div>Child</div>"
+		})
+
+		var vm = new Vue({
+			el: '#app'
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="../../vue.js"></script>
+	<style type="text/css">
+		/*@keyframes bounce-in {
+			0% {
+				transform: scale(0);
+			}
+			50% {
+				transform: scale(1.5);
+			}
+			100% {
+				transform: scale(1);
+			}
+
+		}
+		.active {
+			transform-origin: left center;
+			animation: bounce-in 1s;
+		}
+		.leave {
+			transform-origin: left center;
+			animation: bounce-in 1s reverse;
+		}*/
+		.fade-enter{
+			opacity: 0;
+		}
+		.fade-enter-active{
+			transition: opacity 3s;
+		}
+		.fade-leave-to{
+			opacity: 0;
+		}
+		.fade-leave-active{
+			transition: opacity 3s;
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<!-- <transition name="fade" enter-active-class="active" leave-active-class="leave">
+			<div v-if="show">Hello world</div>
+		</transition> -->
+		<transition name="fade">
+			<div v-if="show">Hello world</div>
+		</transition>
+		<button @click="handleCilck">切换</button>
+	</div>
+
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#root',
+			data: {
+				show: true
+			},
+			methods: {
+				handleCilck: function () {
+					this.show = !this.show
+				}
+			}
+		})
+	</script>
+</body>
+</html>

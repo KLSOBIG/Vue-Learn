@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="../../vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<!-- <div v-show="show">{{message}}</div> -->
+		
+		<!-- <div v-if="show === 'a'">{{message}}</div>
+		<div v-else-if="show === 'b'">This is B</div>
+		<div v-else>This is others</div> -->
+
+		<div v-if="show">
+			用户名：<input key="userName" type="" name="">
+		</div>
+		<div v-else>
+			邮箱名：<input key="email" type="" name="">
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				show: false,
+				message: "hello world"
+			}
+		})
+	</script>
+</body>
+</html>

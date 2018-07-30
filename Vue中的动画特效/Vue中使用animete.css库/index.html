@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Vue中使用animete.css库</title>
+	<script type="text/javascript" src="../../vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../animate.css">
+	<style type="text/css"> 
+		/*@keyframes bounce-in {
+			0% {
+				transform: scale(0);
+			}
+			50% {
+				transform: scale(1.5);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}*/		
+		/*.active {
+			transform-origin: left center;
+			animation: bounce-in 1s;
+		}
+		.leave {
+			transform-origin: left center;
+			animation: bounce-in 1s reverse;
+		}*/
+
+		/*.fade-enter-active{
+			transform-origin: left center;
+			animation: bounce-in 1s;
+		}
+		.fade-leave-active{
+			transform-origin: left center;
+			animation: bounce-in 1s reverse;
+		}*/
+		.alternate-reverse{
+			animation-direction: reverse;
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<transition name="fade" enter-active-class="animated bounceOutUp alternate-reverse" leave-active-class="animated bounceOutUp">
+			<div v-if="show">Hello world</div>
+		</transition>
+		<button @click="handleCilck">切换</button>
+	</div>
+
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#root',
+			data: {
+				show: true
+			},
+			methods: {
+				handleCilck: function () {
+					this.show = !this.show
+				}
+			}
+		})
+	</script>
+</body>
+</html>

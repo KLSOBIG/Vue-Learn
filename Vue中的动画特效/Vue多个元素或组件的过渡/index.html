@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="../../vue.js"></script>
+	<style type="text/css">
+		.v-enter, .v-leave-to {
+			opacity: 0;
+		}
+		.v-enter-active, .v-leave-active {
+			transition: opacity 1s	;
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<transition mode="out-in">
+			<!-- <div v-if="show" key="hello">Hello world</div>
+			<div v-else key="bye">Bye world</div> -->
+			<component :is="type"></component>
+		</transition>
+		<button @click="handleCilck">切换</button>
+	</div>
+
+	<script type="text/javascript">
+		Vue.component('child-one', {
+			template: "<div>child-one</div>"
+		})
+		Vue.component('child-two', {
+			template: "<div>child-two</div>"
+		})
+
+		var vm = new Vue({
+			el: '#root',
+			data: {
+				// show: true
+				
+				type: 'child-one'
+			},
+			methods: {
+				handleCilck: function () {
+					// this.show = !this.show
+
+					this.type = this.type === 'child-one' ? 'child-two' : 'child-one'
+				}
+			}
+		})
+	</script>
+</body>
+</html>

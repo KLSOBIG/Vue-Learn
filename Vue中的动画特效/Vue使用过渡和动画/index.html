@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Vue中使用animete.css库</title>
+	<script type="text/javascript" src="../../vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../animate.css">
+	<style type="text/css">
+		.fade-enter{
+			opacity: 0;
+		}
+		.fade-enter-active{
+			transition: opacity 3s;
+		}
+		.fade-leave-to{
+			opacity: 0;
+		}
+		.fade-leave-active{
+			transition: opacity 3s;
+		} 
+		.alternate-reverse{
+			animation-direction: reverse;
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<!-- type="transition" //自定义动画时长元素 
+			:duration="{enter：5000, leave :10000} //自定义动画时长 
+		-->
+		<transition 
+			:duration="5000"
+			name="fade" 
+			appear
+			enter-active-class="animated bounceOutUp alternate-reverse fade-enter-active" 
+			leave-active-class="animated bounceOutUp fade-leave-active"
+			appear-active-class="animated bounceOutUp alternate-reverse"
+		>
+			<div v-if="show">Hello world</div>
+		</transition>
+		<button @click="handleCilck">切换</button>
+	</div>
+
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#root',
+			data: {
+				show: true
+			},
+			methods: {
+				handleCilck: function () {
+					this.show = !this.show
+				}
+			}
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="../../vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<!-- {{firstName + " " + lastName}} -->
+		{{fullName()}}
+		{{age}}
+	</div>
+
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				firstName: "Dell",
+				lastName: "Lee",
+				fullName: "Dell Lee",
+				age: 18
+			},
+			watch: {
+				firstName: function () {
+					return this.firstName + " " + this.lastName
+				},
+				lastName: function () {
+					return this.firstName + " " + this.lastName
+				}
+			}
+
+			// methods: {
+			// 		fullName: function () {
+			// 		console.log("计算了一次");
+			// 		return this.firstName + " " + this.lastName
+			// 	}
+			// }
+			// computed: {
+			// 	fullName: function () {
+			// 		console.log("计算了一次");
+			// 		return this.firstName + " " + this.lastName
+			// 	}
+			// }
+		})
+	</script>
+</body>
+</html>

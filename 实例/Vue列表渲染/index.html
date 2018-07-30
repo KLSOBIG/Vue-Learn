@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="../../vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div v-for="(item, index) of list" 
+			 :key="item.id">
+			{{item.text}}--{{index}}
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				list: [{
+					id: "0001",
+					text: "hello"
+				}, {
+					id: "0002",
+					text: "world"
+				}, {
+					id: "0003",
+					text: "!"
+				}
+				]
+			}
+		})
+	</script>
+</body>
+</html>
