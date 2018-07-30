@@ -159,3 +159,9 @@ Or  :duration="{enter：5000, leave :10000}"
 > destroyed //实例销毁完成  
 > beforeUpdate //实例更新之前  
 > updated //实例更新完成
+
+# 命令
+- 引入fastclick包 //目前已知作用，去除click 300ms延时  
+```
+npm install fastclick --save
+```
