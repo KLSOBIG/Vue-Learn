@@ -147,9 +147,10 @@ Or  :duration="{enter：5000, leave :10000}"
 - reverse() //对数组取反  
 - set()  
 # vue生命周期
-- vue生命周期图  
+- vue生命周期图
+<div align="center">
 ![vue生命周期](https://github.com/KLSOBIG/Vue-Learn/blob/master/imgs/vue生命周期.png)
-
+</div>
 - vue生命周期钩子  
 > beforeCreate //初始化之前  
 > created //初始化完成  
