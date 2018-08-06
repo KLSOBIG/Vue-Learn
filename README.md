@@ -148,7 +148,7 @@ Or  :duration="{enter：5000, leave :10000}"
 - set()  
 # vue生命周期
 - vue生命周期图  
-<div align="center">![vue生命周期](https://github.com/KLSOBIG/Vue-Learn/blob/master/imgs/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png)</div>
+![vue生命周期](https://github.com/KLSOBIG/Vue-Learn/blob/master/imgs/vue生命周期.png)
 
 - vue生命周期钩子  
 > beforeCreate //初始化之前  
